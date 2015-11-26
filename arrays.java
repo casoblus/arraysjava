@@ -14,6 +14,8 @@ class Arrays
 		
 		// indice de array
 		int i;
+		// Suma
+		int suma = 0;
 
 		// pido numeros y los voy guardando en las posiciones del array
 		for( i = 0; i < tamano; i++ )
@@ -27,5 +29,13 @@ class Arrays
 		{
 			System.out.println( numeros[i] );
 		}
+
+		// Suma todos los valores del array
+		for ( i = 0; i < tamano; i++ )
+		{
+			suma += numeros[i];
+		}
+
+		System.out.println( "La suma es: " + suma );
 	}
 }
