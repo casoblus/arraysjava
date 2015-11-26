@@ -17,6 +17,8 @@ class Arrays
 		// Suma
 		int suma = 0;
 
+		int buscar;
+
 		// pido numeros y los voy guardando en las posiciones del array
 		for( i = 0; i < tamano; i++ )
 		{
@@ -37,5 +39,15 @@ class Arrays
 		}
 
 		System.out.println( "La suma es: " + suma );
+
+		// Se pide al usuario que numero buscar.
+		System.out.println( "Buscar posicion del numero: " );
+		buscar = sc.nextInt();
+
+		for ( i = 0; i < tamano; i++ )
+		{
+			if ( numeros[i] == buscar )
+				System.out.println( "El numero existe en las posicion: " + i );
+		}
 	}
 }
