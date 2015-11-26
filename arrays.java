@@ -51,21 +51,29 @@ class Arrays
 		}
 
 		// Muestra cual es el menor introducido
-		int menor = 0;
+		int menor = 0, mayor = 0;
 		for ( i = 0; i < tamano; i++ )
 		{
 			// La primera vez, asigno el valor de la primera posicion
-			// del array para eliminar el 0 que contiene la variable menor.
+			// del array para eliminar el 0 que contienen las variables menor y mayor.
 			if( i == 0 ) 
 			{
 				menor = numeros[i];
+				mayor = numeros[i];
 			} else {
 				if( menor > numeros[i] ) 
 				{
 					menor = numeros[i];
+				} 
+				else if( mayor < numeros[i] )
+				{
+					mayor = numeros[i];
 				}
 			}
 		}
+
 		System.out.println( "El menor valor introducido es: " + menor );
+	
+		System.out.println( "El mayor valor introducido es: " + mayor );
 	}
 }
