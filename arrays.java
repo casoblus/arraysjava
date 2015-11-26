@@ -49,5 +49,23 @@ class Arrays
 			if ( numeros[i] == buscar )
 				System.out.println( "El numero existe en las posicion: " + i );
 		}
+
+		// Muestra cual es el menor introducido
+		int menor = 0;
+		for ( i = 0; i < tamano; i++ )
+		{
+			// La primera vez, asigno el valor de la primera posicion
+			// del array para eliminar el 0 que contiene la variable menor.
+			if( i == 0 ) 
+			{
+				menor = numeros[i];
+			} else {
+				if( menor > numeros[i] ) 
+				{
+					menor = numeros[i];
+				}
+			}
+		}
+		System.out.println( "El menor valor introducido es: " + menor );
 	}
 }
