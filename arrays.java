@@ -1,6 +1,34 @@
 import java.util.Scanner;
 class Arrays
 {
+	private static void VER_PAREJAS( int[] array0, int[] array1 ) 
+	{	
+		int i, sumarrays = 0;
+		// Devolve suma dos dous arrays
+		for( i = 0; i < array0.length; i++ )
+		{
+			sumarrays += array0[i];	
+		}
+
+		for( i = 0; i < array1.length; i++ )
+		{
+			sumarrays += array1[i];	
+		}
+		// Visualiza as parellas de valores que
+		// tienen el mismo indice en ambos arrays.
+		if( array0.length == array1.length )
+		{
+			// Si tienen la misma longitud, 
+			// muestro los valores emparejados
+			System.out.println( "\tA0\t*\tA1\t" );
+			
+			for( i = 0; i < array0.length; i++ )
+			{
+				System.out.println( "\t" + array0[i] + "\t*\t" + array1[i] + "\t" );
+			}
+		}
+	}
+	
 	public static void main( String[] args )
 	{
 		Scanner sc = new Scanner(System.in);
@@ -75,5 +103,10 @@ class Arrays
 		System.out.println( "El menor valor introducido es: " + menor );
 	
 		System.out.println( "El mayor valor introducido es: " + mayor );
+		
+		int[] A0 = { 1, 2, 3, 4 };
+		int[] A1 = { 3, 4, 5, 6 };	
+		
+		VER_PAREJAS( A0, A1 );
 	}
 }
